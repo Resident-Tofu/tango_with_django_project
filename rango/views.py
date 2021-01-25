@@ -7,6 +7,8 @@ from rango.forms import PageForm
 from django.shortcuts import redirect
 from django.urls import reverse
 
+# How to replace URLs using `reverse()`?
+
 def index(request):
     category_list = Category.objects.order_by('-likes')[:5]
     page_list = Page.objects.order_by('-views')[:5]
